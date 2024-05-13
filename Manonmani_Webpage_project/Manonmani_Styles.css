@@ -1,0 +1,46 @@
+#container{
+    width: 400px;
+    border:1px solid white;
+    border-radius: 30px;
+    padding:20px;
+    margin:0 auto;
+}
+
+h1{
+    text-align: center;
+    color: aliceblue;
+}
+
+#input{
+    width:130px;
+
+}
+
+#message{
+    color:brown;
+}
+#win{
+    color:green;
+}
+#lose{
+    color:red;
+}
+
+#button{
+    margin:20px;
+}
+
+body{
+text-align: center;
+margin-top:12%;
+background:url('https://img.freepik.com/free-vector/gradient-numerology-background_23-2150051046.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+#try{
+    color:rgb(14, 186, 209);
+}
+h2{
+    color: rgb(255, 255, 255);
+}

@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number game</title>
+    <link rel="stylesheet" href="Manonmani_Styles.css">
+</head>
+<body>
+    <h1>Guess the number</h1>
+    <div id = "container">
+        <p><h2>Guess the number between 1 and 15</h2></p>
+        <input id="input" type="number" min="1" max="15" placeholder="Enter your Guess">
+        <button id="button" onclick="checktheGuess()">Submit</button>
+        <p id="message"></p>
+        <p id="win"></p>
+        <p id="lose"></p>
+        <p id="try"></p>
+    </div>
+    <script>
+    var number = Math.floor(Math.random() * 15) + 1;
+    var guess;
+    var tries=3;
+    function checktheGuess(){
+    guess=document.getElementById("input").value ;
+    if(guess == number){
+        document.getElementById("win").innerHTML="You win! The number was " + number + ".";
+        document.getElementById("button").disabled=true;
+    }
+
+    else if(tries>1){
+        tries--;
+        document.getElementById("message").innerHTML = "";
+        document.getElementById("message").innerHTML ="Wrong! " + (guess>number ? "Your guess is too high." : "Your guess is too low.");
+        document.getElementById("try").innerHTML ="You have " + tries + " tries left.";
+    }
+
+    else{
+        document.getElementById("lose").innerHTML="You lose! The number was " + number + ".";
+        document.getElementById("button").disabled=true;
+    }
+
+}
+</script>
+</body>
+</html>
